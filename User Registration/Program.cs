@@ -1,14 +1,14 @@
 using System;
 
-namespace UserRegistration
+namespace Valid_Last
 {
-    public class Program
+    class Program
     {
         static void Main(string[] args)
         {
             Pattern pattern = new Pattern();
             Console.WriteLine(pattern.isValidFirstName("Venky"));
-
+            Console.WriteLine(pattern.isValidFirstName("Dyarangula"));
         }
     }
 }
