@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace UC8_Password_Rule4
+namespace UC9_all_Email_Sample
 {
     public class Pattern
     {
@@ -103,7 +103,7 @@ namespace UC8_Password_Rule4
 
         public bool isValidPassword(string password)
         {
-            string passwordRegex = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&!-+=])[a -zA-Z0-9]{8,}$";
+            string passwordRegex = "^(?=.*[A-Z])(?=.*[0-9])[a -zA-Z0-9]{8,}$";
             Regex regex = new Regex(passwordRegex);
             try
             {
@@ -114,8 +114,7 @@ namespace UC8_Password_Rule4
                 else
                 {
                     throw new UserException(UserException.ExceptionType.INVALID_PASSWORD, "Invalid_Password," +
-                        "\n1.Password must be greater than 8 Characters\n2.Atleast One Upper Character\n3.Atleast One Numeric Value" +
-                        "\n4.Atleat One Special Symbol");
+                        "\n1.Password must be greater than 8 Characters\n2.Atleast One Upper Character\n3.Atleast One Numeric Value");
                 }
 
             }

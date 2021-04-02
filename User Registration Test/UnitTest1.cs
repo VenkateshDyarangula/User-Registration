@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UC8_Password_Rule4;
+using UC9_all_Email_Sample;
 
-namespace UC8_Password_Rule4_Test
+namespace UC9_all_Email_Sample_Test
 {
     [TestClass]
     public class UnitTest1
@@ -39,6 +39,6 @@ namespace UC8_Password_Rule4_Test
             bool result = pattern.isValidPassword("VenkyPassword123$");
             Assert.AreEqual(true, result);
         }
+
     }
 }
-

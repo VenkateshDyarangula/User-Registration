@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC8_Password_Rule4
+namespace UC9_all_Email_Sample
 {
     public class UserException : Exception
     {

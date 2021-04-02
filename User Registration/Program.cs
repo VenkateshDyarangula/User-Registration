@@ -1,29 +1,60 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace UC8_Password_Rule4
+namespace UC9_all_Email_Sample
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Pattern pattern = new Pattern();
+            Pattern patter = new Pattern();
             Console.WriteLine("Enter First_Name:");
             string firstName = Console.ReadLine();
-            Console.WriteLine(pattern.isValidFirstName(firstName));
+            Console.WriteLine(patter.isValidFirstName(firstName));
             Console.WriteLine("Enter Last_Name:");
             string lastName = Console.ReadLine();
-            Console.WriteLine(pattern.isValidLastName(lastName));
+            Console.WriteLine(patter.isValidLastName(lastName));
             Console.WriteLine("Enter Email_Id:");
             string email = Console.ReadLine();
-            Console.WriteLine(pattern.isValidEmail(email));
+            Console.WriteLine(patter.isValidEmail(email));
             Console.WriteLine("Enter Mobile_Number:");
             string mobile = Console.ReadLine();
-            Console.WriteLine(pattern.isValidMobileNumber(mobile));
-            Console.WriteLine("Enter Password");
+            Console.WriteLine(patter.isValidMobileNumber(mobile));
+            Console.WriteLine("Enter Password:");
             string password = Console.ReadLine();
-            Console.WriteLine(pattern.isValidPassword(password));
+            Console.WriteLine(patter.isValidPassword(password));
+            Console.WriteLine("Checking all Email Patterns That are Matching!");
+            List<string> validEmailList = new List<string>()
+            { "abc@yahoo.com", "abc-100@yahoo.com" ,"abc.100@yahoo.com","abc111@abc.com","abc-100@abc.net",
+                "abc.100@abc.com.au","abc@1.com","abc@gmail.com.com","abc+100@gmail.com"};
+
+            foreach (string emails in validEmailList)
+            {
+                if (patter.isValidEmail(emails))
+                {
+                    Console.WriteLine(true);
+                }
+                else
+                {
+                    Console.WriteLine(false);
+                }
+            }
+            Console.WriteLine("Checking all Email Patterns That are not Matching!");
+            List<string> invalidEmailList = new List<string>()
+            {"abc","abc@.com.my","abc123@gmail.a","abc123@.com","abc123@.com.com",".abc@abc.com","abc()*@gmail.com",
+             "abc@%*.com","abc..2002@gmail.com}","abc.@gmail.com","abc@abc@gmail.com","abc@gmail.com.1a","abc@gmail.com.aa.au" };
+
+            foreach (string emails in invalidEmailList)
+            {
+                if (patter.isValidEmail(emails))
+                {
+                    Console.WriteLine(false);
+                }
+                else
+                {
+                    Console.WriteLine(false);
+                }
+            }
         }
     }
 }
