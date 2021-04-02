@@ -1,6 +1,6 @@
 using System;
 
-namespace UC6_Password_Rule2
+namespace UC7_Password_Rule3
 {
     class Program
     {
@@ -22,8 +22,6 @@ namespace UC6_Password_Rule2
             Console.WriteLine("Enter Password");
             string password = Console.ReadLine();
             Console.WriteLine(pattern.isValidPassword(password));
-
         }
     }
 }
-
