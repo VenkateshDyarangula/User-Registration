@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Valid_Last;
+using UC3_Valid_Email;
 
-namespace UC2_ValidLastTest
+namespace UC3_Valid_Email_Test
 {
     [TestClass]
     public class UnitTest1
@@ -20,5 +20,14 @@ namespace UC2_ValidLastTest
             bool result = pattern.isValidLastName("Dyarangula");
             Assert.AreEqual(true, result);
         }
+        [TestMethod]
+        public void Given_Valid_Email()
+        {
+            bool result = pattern.isValidEmail("BridgeLabs123@gmail.co.in");
+            Assert.AreEqual(true, result);
+        }
+
     }
+
 }
+
