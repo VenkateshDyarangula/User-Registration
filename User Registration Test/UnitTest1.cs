@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UC4_Mobile_Format;
+using UC5_Password_Rule1;
 
-namespace UC4_Mobile_Format_Test
+namespace UC5_Password_Rule1_Test
 {
     [TestClass]
     public class UnitTest1
@@ -23,13 +23,19 @@ namespace UC4_Mobile_Format_Test
         [TestMethod]
         public void Given_Valid_Email()
         {
-            bool result = pattern.isValidEmail("BridgeLabs123@gmail.co.in");
+            bool result = pattern.isValidEmail("Venkateshdyarangula@gmail.co.in");
             Assert.AreEqual(true, result);
         }
         [TestMethod]
         public void Given_Valid_Phone()
         {
             bool result = pattern.isValidMobileNumber("91 7989798979");
+            Assert.AreEqual(true, result);
+        }
+        [TestMethod]
+        public void Given_Valid_Password()
+        {
+            bool result = pattern.isValidPassword("VenkyPasswordTest");
             Assert.AreEqual(true, result);
         }
 

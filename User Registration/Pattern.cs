@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Text.RegularExpressions;
-using UserRegistration;
 
-namespace UC4_Mobile_Format
+namespace UC5_Password_Rule1
 {
     public class Pattern
     {
@@ -13,7 +13,7 @@ namespace UC4_Mobile_Format
             Regex regex = new Regex(firstNameRegex);
             try
             {
-                if (regex.IsMatch(firstName)) 
+                if (regex.IsMatch(firstName))
                 {
                     return true;
                 }
@@ -36,11 +36,11 @@ namespace UC4_Mobile_Format
             Regex regex = new Regex(lastNameRegex);
             try
             {
-                if (regex.IsMatch(lastName)) 
+                if (regex.IsMatch(lastName))
                 {
                     return true;
                 }
-               else
+                else
                 {
                     throw new UserException(UserException.ExceptionType.INVALID_LAST_NAME, "Invalid_Last_Name");
                 }
@@ -59,7 +59,7 @@ namespace UC4_Mobile_Format
             Regex regex = new Regex(emailRegex);
             try
             {
-                if (regex.IsMatch(email)) 
+                if (regex.IsMatch(email))
                 {
                     return true;
                 }
@@ -84,9 +84,9 @@ namespace UC4_Mobile_Format
             {
 
                 if (regex.IsMatch(mobile))
-                 {
+                {
                     return true;
-                 }
+                }
                 else
                 {
                     throw new UserException(UserException.ExceptionType.INVALID_MOBILE_NUMBER, "Invalid_Mobile_Number");
@@ -100,5 +100,30 @@ namespace UC4_Mobile_Format
             }
 
         }
+
+        public bool isValidPassword(string password)
+        {
+            string passwordRegex = "^[a-zA-Z0-9]{8,}$";
+            Regex regex = new Regex(passwordRegex);
+            try
+            {
+                if (regex.IsMatch(password))
+                {
+                    return true;
+                }
+                else
+                {
+                    throw new UserException(UserException.ExceptionType.INVALID_PASSWORD, "Invalid_Password,\nPassword must be greater than 8 Characters!");
+                }
+
+            }
+            catch (UserException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+
+        }
+
     }
 }

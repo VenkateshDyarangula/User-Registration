@@ -1,8 +1,8 @@
 using System;
 
-namespace UC4_Mobile_Format
+namespace UC5_Password_Rule1
 {
-   class Program
+    class Program
     {
         static void Main(string[] args)
         {
@@ -19,8 +19,10 @@ namespace UC4_Mobile_Format
             Console.WriteLine("Enter Mobile_Number:");
             string mobile = Console.ReadLine();
             Console.WriteLine(pattern.isValidMobileNumber(mobile));
+            Console.WriteLine("Enter Password");
+            string password = Console.ReadLine();
+            Console.WriteLine(pattern.isValidPassword(password));
 
         }
-       
     }
 }

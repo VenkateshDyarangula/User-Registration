@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-//UserDefined Exception
-namespace UserRegistration
+
+namespace UC5_Password_Rule1
 {
     public class UserException : Exception
     {
@@ -10,8 +10,10 @@ namespace UserRegistration
         {
             INVALID_FIRST_NAME,
             INVALID_LAST_NAME,
+            INVALID_MOBILE_NUMBER,
             INVALID_EMAIL_ID,
-            INVALID_MOBILE_NUMBER
+            INVALID_PASSWORD,
+
         }
         private readonly ExceptionType type;
         public UserException(ExceptionType Type, String message) : base(message)
