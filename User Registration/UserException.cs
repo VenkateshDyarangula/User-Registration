@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC5_Password_Rule1
+namespace UC6_Password_Rule2
 {
     public class UserException : Exception
     {

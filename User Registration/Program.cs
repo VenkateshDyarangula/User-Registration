@@ -1,6 +1,6 @@
 using System;
 
-namespace UC5_Password_Rule1
+namespace UC6_Password_Rule2
 {
     class Program
     {
@@ -26,3 +26,4 @@ namespace UC5_Password_Rule1
         }
     }
 }
+

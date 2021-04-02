@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UC5_Password_Rule1;
+using UC6_Password_Rule2;
 
-namespace UC5_Password_Rule1_Test
+namespace UC6_Password_Rule2_Test
 {
     [TestClass]
     public class UnitTest1

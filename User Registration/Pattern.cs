@@ -1,9 +1,9 @@
-using System;
+5using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace UC5_Password_Rule1
+namespace UC6_Password_Rule2
 {
     public class Pattern
     {
@@ -103,7 +103,7 @@ namespace UC5_Password_Rule1
 
         public bool isValidPassword(string password)
         {
-            string passwordRegex = "^[a-zA-Z0-9]{8,}$";
+            string passwordRegex = "^(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
             Regex regex = new Regex(passwordRegex);
             try
             {
@@ -113,7 +113,7 @@ namespace UC5_Password_Rule1
                 }
                 else
                 {
-                    throw new UserException(UserException.ExceptionType.INVALID_PASSWORD, "Invalid_Password,\nPassword must be greater than 8 Characters!");
+                    throw new UserException(UserException.ExceptionType.INVALID_PASSWORD, "Invalid_Password,\n1.Password must be greater than 8 Characters\n2.Atleast One Upper Character");
                 }
 
             }
@@ -124,6 +124,5 @@ namespace UC5_Password_Rule1
             }
 
         }
-
     }
 }
