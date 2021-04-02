@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UC7_Password_Rule3;
+using UC8_Password_Rule4;
 
-namespace UC7_Password_Rule3_Test
+namespace UC8_Password_Rule4_Test
 {
     [TestClass]
     public class UnitTest1
@@ -36,9 +36,9 @@ namespace UC7_Password_Rule3_Test
         [TestMethod]
         public void Given_Valid_Password()
         {
-            bool result = pattern.isValidPassword("VenkyPassword123");
+            bool result = pattern.isValidPassword("VenkyPassword123$");
             Assert.AreEqual(true, result);
         }
-
     }
 }
+
