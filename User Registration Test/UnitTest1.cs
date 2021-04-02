@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UC3_Valid_Email;
+using UC4_Mobile_Format;
 
-namespace UC3_Valid_Email_Test
+namespace UC4_Mobile_Format_Test
 {
     [TestClass]
     public class UnitTest1
@@ -26,8 +26,12 @@ namespace UC3_Valid_Email_Test
             bool result = pattern.isValidEmail("BridgeLabs123@gmail.co.in");
             Assert.AreEqual(true, result);
         }
+        [TestMethod]
+        public void Given_Valid_Phone()
+        {
+            bool result = pattern.isValidMobileNumber("91 7989798979");
+            Assert.AreEqual(true, result);
+        }
 
     }
-
 }
-
